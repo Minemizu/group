@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+h1{
+    text-align: center;
+}
+#sample{
+    background-color: white;
+    padding: 0.5rem;
+    width: 100%;
+    display: block;
+    list-style: none;
+    display: flex;
+}
+header ul li + li{
+    border-left: 2px solid black;
+}
+header ul li a{
+    font-weight: bold;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.menu{
+    position: relative;
+    z-index: 1;
+    padding: 0 10px;
+  }
+  .menu::before {
+    background: black;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .3s;
+    z-index: -1;
+  }
+.menu:hover {
+    color: #fff;
+  }
+  .menu:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+header ul li{
+    width: 20%;
+    text-align: center;
+}
+.breadcrumbs li::after{
+    content: ">";
+    padding: 0 0.5rem;
+}
+.breadcrumbs li:last-child::after{
+    content: "";
+}
+.breadcrumbs{
+    display: flex;
+    list-style: none;
+}
+.breadcrumbs a:hover{
+    text-decoration: none;
+}
+body{
+    min-width: 700px;
+    font-family: 'Noto Serif JP', serif;
+}
+.practice{
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+}
+.dropdown, .dropend, .dropstart, .dropup {
+    position: relative;
+}
+nav ul li {
+    display: table-cell;
+    min-width: 50px;
+    border-right: 1px solid #ccc;
+}
+nav ul {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+@charset "utf-8";
+body{
+    background-image: url(img/背景.jpg);
+}
+main{
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.flame{
+    margin-bottom: 2rem;
+    display: flow-root;
+}
+.float-left{
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin: 0 auto;
+    float: left;
+}
+.float-right{
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin: 0 auto;
+    float: right;
+}
+.frame{
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+.highlight_move {
+    background: linear-gradient(transparent 50%, #ff0 30%);
+    animation: slideIn 1s ease-out;
+    position: relative;
+    display: inline-block;
+ }
+ .fade-in-text {
+    position: relative;
+    font-size: 24px;
+    opacity: 0; /* 初めは透明に設定 */
+    transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+    animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  @keyframes fadeInFromBottom {
+    to {
+      opacity: 1; /* アニメーション終了時に完全に表示 */
+      transform: translateY(0); /* アニメーション終了時の位置 */
+    }
+  }
+ 
+ @keyframes slideIn {
+    0% {
+       transform: translateX(-100%);
+    }
+    100% {
+       transform: translateX(0);
+    }
+ }
